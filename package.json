@@ -19,5 +19,8 @@
   "bugs": {
     "url": "https://github.com/xyyojl/vue-ui/issues"
   },
-  "homepage": "https://github.com/xyyojl/vue-ui#readme"
+  "homepage": "https://github.com/xyyojl/vue-ui#readme",
+  "dependencies": {
+    "vue": "^2.5.22"
+  }
 }
