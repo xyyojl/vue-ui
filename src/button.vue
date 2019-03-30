@@ -1,8 +1,17 @@
 <template>
-    <button class="g-button">按钮</button>
+    <button class="g-button">
+        <svg class="icon" v-if="icon">
+            <!-- 让属性是动态的 模板字符串 -->
+            <!-- 最终效果 <use xlink:href="#i-settings"></use> -->
+            <use :xlink:href="`#i-${icon}`"></use>
+        </svg>
+        <slot></slot>    
+    </button>
 </template>
 <script>
-    export default {}
+    export default {
+        props:['icon','iconPosition'] // left right
+    }
 </script>
 <style lang="scss">
     .g-button{
