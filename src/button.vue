@@ -1,10 +1,11 @@
 <template>
-    <button class="g-button" :class="{[`icon-${iconPosition}`]:true}">
+    <button class="g-button" :class="{[`icon-${iconPosition}`]:true}"
+        @click="$emit('click')">
         <!-- <svg class="icon" v-if="icon">
             <use :xlink:href="`#i-${icon}`"></use>
         </svg> -->
-        <g-icon v-if="icon" :name="icon" class="icon"></g-icon>
-        <g-icon name="loading" class="loading"></g-icon>
+        <g-icon v-if="icon && !loading" :name="icon" class="icon"></g-icon>
+        <g-icon name="loading" v-if="loading" class="loading icon"></g-icon>
         <div class="content">
             <slot></slot>   
         </div>
@@ -15,6 +16,10 @@
         // props:['icon','iconPosition'] // left right
         props:{
             icon:{},
+            loading:{
+                type:Boolean,
+                default: false
+            },
             iconPosition:{
                 type:String,
                 default:'left',
