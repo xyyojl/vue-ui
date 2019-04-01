@@ -1,11 +1,11 @@
 <template>
-    <button class="g-button">
+    <button class="g-button" :class="{[`icon-${iconPosition}`]:true}">
         <svg class="icon" v-if="icon">
-            <!-- 让属性是动态的 模板字符串 -->
-            <!-- 最终效果 <use xlink:href="#i-settings"></use> -->
             <use :xlink:href="`#i-${icon}`"></use>
         </svg>
-        <slot></slot>    
+        <div class="content">
+            <slot></slot>   
+        </div>
     </button>
 </template>
 <script>
@@ -21,6 +21,10 @@
         border-radius: var(--border-radius);
         border: 1px solid var(--border-color);
         background: var(--button-bg);
+        display: inline-flex;
+        justify-content: center;
+        align-items: center;
+        vertical-align: middle;
         &:hover{
             border-color: var(--border-color-hover);
         }
@@ -29,6 +33,24 @@
         }
         &:focus{
             outline: none;
+        }
+        > .content{
+            order: 2;
+        }
+        > .icon{
+            order: 1;
+            margin-right: .1em;
+        }
+        
+        &.icon-right{
+            > .content{
+                order: 1;
+            }
+            > .icon{
+                order: 2;
+                margin-right: 0;
+                margin-left: .1em;
+            }
         }
     }
 
