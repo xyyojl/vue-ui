@@ -12,7 +12,11 @@
     </button>
 </template>
 <script>
+    import Icon from './icon';
     export default {
+        components:{
+            'g-icon':Icon
+        },
         // props:['icon','iconPosition'] // left right
         props:{
             icon:{},
