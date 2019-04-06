@@ -5,6 +5,7 @@
 </template>
 <script>
 export default {
+    name:'UiButtonGroup',
     // mounted 当按钮出现在页面的时候执行
     mounted(){
         for (let node of this.$el.children) {
@@ -17,7 +18,7 @@ export default {
     }
 }
 </script>
-<style lang="scss">
+<style lang="scss" scoped>
     .g-button-group{
         display: inline-flex;
         vertical-align: middle;
