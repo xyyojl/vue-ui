@@ -74,11 +74,16 @@ describe('Input', () => {
                 vm.$on(eventName, callback)
                 // 触发input的change事件 js trigger change event
                 let event = new Event(eventName);
+                Object.defineProperty(
+                    event,'target',
+                    {
+                        value:{value:'xxx'},
+                        enumerable:true
+                    }
+                )
                 let inputElement = vm.$el.querySelector('input');
                 inputElement.dispatchEvent(event);
-                console.log(eventName);
-                
-                expect(callback).to.have.been.calledWith(even);
+                expect(callback).to.have.been.calledWith('xxx');
             })
             
         })
