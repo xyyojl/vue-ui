@@ -30,6 +30,30 @@
 </head>
 <body>
     <div id="app">
+        <g-row>
+            <g-col>1</g-col>
+            <g-col>2</g-col>
+        </g-row>
+        <g-row>
+            <g-col>1</g-col>
+            <g-col>2</g-col>
+            <g-col>3</g-col>
+        </g-row>
+        <g-row>
+            <g-col>1</g-col>
+            <g-col>2</g-col>
+            <g-col>3</g-col>
+            <g-col>4</g-col>
+        </g-row>
+        <g-row>
+            <g-col span="2">2</g-col>
+            <g-col span="22">22</g-col>
+        </g-row>
+        <g-row>
+            <g-col span="4">4</g-col>
+            <g-col span="20">20</g-col>
+        </g-row>
+        <hr>
         <div class="box">
             <g-input v-model="message"></g-input>
             <p>{{message}}</p>
@@ -62,8 +86,7 @@
                 <g-button>more</g-button>
                 <g-button icon="right" icon-position="right">下一页</g-button>
             </g-button-group>
-        </div>
-        
+        </div>    
     </div>
     <script src="./src/app.js"></script>
 </body>
