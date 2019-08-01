@@ -37,21 +37,6 @@ describe('Row', () => {
         })
 
     })
-    /*  it('接收 align 属性', () => {
-         const div = document.createElement('div')
-         document.body.appendChild(div)
-         const Constructor = Vue.extend(Row)
-         const vm = new Constructor({
-             propsData: {
-                 align: 'left'
-             }
-         }).$mount(div)
-         const element = vm.$el
-         console.log(element)
-         expect(getComputedStyle(element).justifyContent).to.equal('flex-start')
-         vm.$el.remove()
-         vm.$destroy()
-     }) */
     it('接收 align 属性', () => {
         const div = document.createElement('div')
         document.body.appendChild(div)
