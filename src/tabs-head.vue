@@ -12,8 +12,6 @@ export default {
     name: 'GuluTabsHead',
     inject: ['eventBus'],
     created(){
-        // 验证事件要看在哪个对象上触发，只能对那个对象监听
-        this.$emit('update:selected', 'tabs-head 抛出的数据')
     }    
 }
 </script>
