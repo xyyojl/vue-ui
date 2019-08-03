@@ -22,7 +22,6 @@ export default {
         display: flex;
         height: $tab-height;
         justify-content: flex-start;
-        // 有点问题
         align-items: center;
         border: 1px solid red;
         > .actions-wrapper{
