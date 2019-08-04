@@ -178,10 +178,12 @@ $border-radius: 4px;
     }
     &::before {
       border-top-color: #000;
+      border-bottom: 0;
       top: 100%;
     }
     &::after {
       border-top-color: #fff;
+      border-bottom: 0;
       top: calc(100% - 1px);
     }
   }
@@ -193,10 +195,12 @@ $border-radius: 4px;
     }
     &::before {
       border-bottom-color: #000;
+      border-top: 0;
       bottom: 100%;
     }
     &::after {
       border-bottom-color: #fff;
+      border-top: 0;
       bottom: calc(100% - 1px);
     }
   }
@@ -210,10 +214,12 @@ $border-radius: 4px;
     }
     &::before {
       border-left-color: #000;
+      border-right: none;
       left: 100%;
     }
     &::after {
       border-left-color: #fff;
+      border-right: none;
       left: calc(100% - 1px);
     }
   }
@@ -226,10 +232,12 @@ $border-radius: 4px;
     }
     &::before {
       border-right-color: #000;
+      border-left: none;
       right: 100%;
     }
     &::after {
       border-right-color: #fff;
+      border-left: none;
       right: calc(100% - 1px);
     }
   }
