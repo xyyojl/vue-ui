@@ -3,7 +3,7 @@
         <div class="title" @click="toggle">
             {{title}}
         </div>
-        <div class="content" v-if="open">
+        <div class="content" ref="content" v-if="open">
             <slot></slot>
         </div>
     </div>
@@ -61,6 +61,7 @@ export default {
             margin-left: -1px;
             margin-right: -1px;
             margin-top: -1px;
+            background: lighten($grey,8%);
         }
         &:first-child{
             > .title{
