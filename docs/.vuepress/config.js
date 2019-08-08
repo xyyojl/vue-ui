@@ -1,4 +1,5 @@
 module.exports = {
+    base: '/vue-ui/',
     title: 'gView UI',
     description: '一个好用的UI框架',
     themeConfig: {
