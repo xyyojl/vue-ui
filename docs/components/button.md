@@ -5,7 +5,10 @@ title: Button
 
 使用方法
 
-<button-demos/>
+<ClientOnly>
+  <button-demos></button-demos>
+</ClientOnly>
+
 ```html
 <g-button>默认按钮</g-button>
 <g-button icon="settings">默认按钮</g-button>
