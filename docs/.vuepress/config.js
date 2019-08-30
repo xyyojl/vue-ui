@@ -1,9 +1,10 @@
 module.exports = {
     base: '/vue-ui/',
-    title: 'gView UI',
-    description: '一个好用的UI框架',
+    title: 'Gaiety UI',
+    description: '一个基于 Vue 2 的 UI 框架',
     themeConfig: {
         sidebar: [
+            '/',
             {
                 title: '入门',
                 children: [
