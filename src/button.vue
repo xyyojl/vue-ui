@@ -1,9 +1,6 @@
 <template>
-    <button class="g-button" :class="{[`icon-${iconPosition}`]:true}"
+    <button class="g-button" :class="{[`icon-${iconPosition}`]:true,'disabled':disabled}"
         @click="$emit('click')">
-        <!-- <svg class="icon" v-if="icon">
-            <use :xlink:href="`#i-${icon}`"></use>
-        </svg> -->
         <g-icon v-if="icon && !loading" :name="icon" class="icon"></g-icon>
         <g-icon name="loading" v-if="loading" class="loading icon"></g-icon>
         <div class="content">
@@ -14,29 +11,27 @@
 <script>
     import Icon from './icon';
     export default {
-        name:'UiButton',
+        name:'GuluButton',
         components:{
             'g-icon':Icon
         },
-        // props:['icon','iconPosition'] // left right
         props:{
-            icon:{},
+            icon:{
+                type: String
+            },
             loading:{
                 type:Boolean,
                 default: false
+            },
+            disabled:{
+                type: Boolean,
+                default:false
             },
             iconPosition:{
                 type:String,
                 default:'left',
                 validator(value){
-                    return !(value !== 'left' && value !== 'right');
-                    // return value === 'left' || value === 'right'
-
-                    /* if(value !== 'left' && value !== 'right'){
-                        return false
-                    }else{
-                        return true
-                    } */
+                    return value === 'left' || value === 'right';
                 }
             }
         }
@@ -74,6 +69,12 @@
         }
         &:focus{
             outline: none;
+        }
+        &.disabled{
+            cursor: not-allowed;
+            border: 1px solid #999;
+            color: #999;
+            background: #fff;
         }
         > .content{
             order: 2;

@@ -43,6 +43,13 @@ Vue.component('g-popover', Popover);
 Vue.component('g-collapse', Collapse);
 Vue.component('g-collapse-item', CollapseItem);
 
+
+/* ==================== 华丽的分隔线 重新理解代码思路 */
+// import Button1 from './button1'
+
+
+// Vue.component('f-button', Button1);
+
 new Vue({
     el: '#app',
     data: {
