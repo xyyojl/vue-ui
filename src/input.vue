@@ -16,7 +16,7 @@
 import Icon from './icon';
 export default {
     components: {Icon},
-    name:'UiInput',
+    name:'GuluInput',
     props:{
         value:{
             type: String
@@ -41,7 +41,7 @@ export default {
     $border-color-hover:#666;
     $border-radius: 4px;
     $font-size: 12px;
-    $box-shadow-color:rgba(0,0,0,.5);
+    $box-shadow-color:rgba(0,0,0,.3);
     $red: #f1453d;
     .wrapper{
         font-size: $font-size;
