@@ -1,5 +1,5 @@
 ---
-title: Gird - 网格布局
+title: Grid - 网格布局
 ---
 # 网格
 ## 需求演示
@@ -17,14 +17,38 @@ title: Gird - 网格布局
 </ClientOnly>
 
 ```html
-<g-row>
-    <g-col span="8">1</g-col>
-    <g-col span="8">2</g-col>
-    <g-col span="8">3</g-col>
+<g-row class="demoRow">
+    <g-col span="8"><div class="demoCol">8</div></g-col>
+    <g-col span="8"><div class="demoCol">8</div></g-col>
+    <g-col span="8"><div class="demoCol">8</div></g-col>
 </g-row>
-<g-row>
-    <g-col span="2">1</g-col>
-    <g-col span="22">2</g-col>
+<g-row class="demoRow">
+    <g-col span="6"><div class="demoCol">6</div></g-col>
+    <g-col span="6"><div class="demoCol">6</div></g-col>
+    <g-col span="6"><div class="demoCol">6</div></g-col>
+    <g-col span="6"><div class="demoCol">6</div></g-col>
+</g-row>
+<g-row class="demoRow">
+    <g-col span="4"><div class="demoCol">4</div></g-col>
+    <g-col span="4"><div class="demoCol">4</div></g-col>
+    <g-col span="4"><div class="demoCol">4</div></g-col>
+    <g-col span="4"><div class="demoCol">4</div></g-col>
+    <g-col span="4"><div class="demoCol">4</div></g-col>
+    <g-col span="4"><div class="demoCol">4</div></g-col>
+</g-row>
+<g-row class="demoRow">
+    <g-col span="2"><div class="demoCol">2</div></g-col>
+    <g-col span="2"><div class="demoCol">2</div></g-col>
+    <g-col span="2"><div class="demoCol">2</div></g-col>
+    <g-col span="2"><div class="demoCol">2</div></g-col>
+    <g-col span="2"><div class="demoCol">2</div></g-col>
+    <g-col span="2"><div class="demoCol">2</div></g-col>
+    <g-col span="2"><div class="demoCol">2</div></g-col>
+    <g-col span="2"><div class="demoCol">2</div></g-col>
+    <g-col span="2"><div class="demoCol">2</div></g-col>
+    <g-col span="2"><div class="demoCol">2</div></g-col>
+    <g-col span="2"><div class="demoCol">2</div></g-col>
+    <g-col span="2"><div class="demoCol">2</div></g-col>
 </g-row>
 ```
 
@@ -36,13 +60,20 @@ title: Gird - 网格布局
 </ClientOnly>
 
 ```html
-<g-row gutter="10">
-    <g-col :ipad="{span:'6'}"><div>间隔 10px</div> </g-col>
-    <g-col :ipad="{span:'18'}"><div>间隔 10px</div></g-col>
+<g-row class="demoRow" gutter="10">
+    <g-col span="8"><div class="demoCol">8</div></g-col>
+    <g-col span="8"><div class="demoCol">8</div></g-col>
+    <g-col span="8"><div class="demoCol">8</div></g-col>
 </g-row>
-<g-row >
-    <g-col span="1" > 1</g-col>
-    <g-col span="22" offset="1">2</g-col>
+<g-row class="demoRow" gutter="10">
+    <g-col span="6"><div class="demoCol">6</div></g-col>
+    <g-col span="6"><div class="demoCol">6</div></g-col>
+    <g-col span="6"><div class="demoCol">6</div></g-col>
+    <g-col span="6"><div class="demoCol">6</div></g-col>
+</g-row>
+<g-row class="demoRow" gutter="10">
+    <g-col span="1"><div class="demoCol">1</div></g-col>
+    <g-col span="22" offset="1"><div class="demoCol">2</div></g-col>
 </g-row>
 ```
 

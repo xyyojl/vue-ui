@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="zh-Hans">
 <head>
-    <meta charset="UTF-8">
+    <meta charset="UTg-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>一个UI框架</title>
@@ -22,18 +22,42 @@
         }
     </style>
     <style>
-        .g-icon{
-            width: 1em;
-            height: 1em;
+        .demoRow{
+            margin: 10px 0;
+        }
+        .demoCol {
+            height: 50px;
+            border: 1px solid #ccc;
+            background: #7CB8FF;
+            display: flex;
+            justify-content: center;
+            align-items: center;
         }
     </style>
 </head>
 <body>
-    <div id="app" style="padding: 100px;">
-        <g-input value="默认状态"></g-input>
-        <g-input value="禁用状态" disabled></g-input>
-        <g-input value="只读状态" readonly></g-input>
-        <g-input value="123" error="请重新输入手机号码"></g-input>
+    <div id="app">
+        <g-row>
+            <g-col span="8">8</g-col>
+            <g-col span="8">8</g-col>
+            <g-col span="8">8</g-col>
+        </g-row>
+        <g-row>
+            <g-col span="2">2</g-col>
+            <g-col span="22">22</g-col>
+        </g-row>
+
+        <g-row class="demoRow" gutter="10">
+            <g-col span="8"><div class="demoCol">8</div></g-col>
+            <g-col span="8"><div class="demoCol">8</div></g-col>
+            <g-col span="8"><div class="demoCol">8</div></g-col>
+        </g-row>
+        <g-row class="demoRow" gutter="10">
+            <g-col span="6"><div class="demoCol">6</div></g-col>
+            <g-col span="6"><div class="demoCol">6</div></g-col>
+            <g-col span="6"><div class="demoCol">6</div></g-col>
+            <g-col span="6"><div class="demoCol">6</div></g-col>
+        </g-row>
     </div>
     <script src="./src/app.js"></script>
 </body>

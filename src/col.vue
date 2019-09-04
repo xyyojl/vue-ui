@@ -15,7 +15,7 @@ let validator = value => {
   return valid;
 };
 export default {
-  name: "GiluCol",
+  name: "GuluCol",
   props: {
     span: {
       type: [Number, String]

@@ -3,6 +3,15 @@ title: Toast - 弹窗
 ---
 # Toast 弹窗
 
+:::tip
+若点击按钮无显示，需要设置
+:::
+
+``` CSS
+.w-toast {
+    z-index: 30;
+}
+```
 ## 使用方法
 
 Toast 组件可以实现点击后弹窗的效果。因为是在点击后才显示在页面中的组件，因此使用方法与其他直接插入页面中的组件不同，您需要引入并使用 `plugin`，而不是直接引入 Toast 组件。具体方法如下： 
@@ -54,46 +63,7 @@ new Vue({
 </ClientOnly>
 
 ``` html
-<template>
-  <div>
-    <g-button @click="showToast1">顶部浮层</g-button>
-    <g-button @click="showToast2">中部浮层</g-button>
-    <g-button @click="showToast3">底部浮层</g-button>
-  </div>
-</template>
-<script>
-import Vue from 'vue'
-import Button from "../../../src/button";
-import plugin from "../../../src/plugin";
-Vue.use(plugin);
-export default {
-  components: {
-    "g-button": Button
-  },
-  methods: {
-    showToast1() {
-      this.showToast("top");
-    },
-    showToast2() {
-      this.showToast("middle");
-    },
-    showToast3() {
-      this.showToast("bottom");
-    },
-    showToast(position) {
-      this.$toast("<p>我是 message</p>", {
-        closeButton: {
-          text: "关掉我",
-          callback() {
-            console.log("关掉我了");
-          }
-        },
-        autoClose: 5,
-        enableHTML: true,
-        position
-      });
-    }
-  }
-};
-</script>
+<g-button @click="$toast('点击弹出提示', {position:'top',autoClose: false})">顶部弹出</g-button>
+<g-button @click="$toast('点击弹出提示', {position:'middle'})">中间弹出</g-button>
+<g-button @click="$toast('点击弹出提示', {position:'bottom'})">底部弹出</g-button>
 ```
