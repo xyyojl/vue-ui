@@ -38,10 +38,6 @@ yarn add gaiety-ui
 
 [Issues](https://github.com/xyyojl/vue-ui/issues ) 
 
-## 变更记录
-
-
-
 ## 联系方式
 
 区家乐 五邑大学 2020本科应届毕业生 正在寻求一份前端开发的工作
