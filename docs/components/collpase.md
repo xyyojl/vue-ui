@@ -13,10 +13,10 @@ Collapse 组件的默认效果即可同时展开多个面板，且面板之间�
 
 
 ``` html
-<g-collapse :selected="['one','two','three']">
-    <g-collapse-item title="标题1" name="one">内容文字1</g-collapse-item>
-    <g-collapse-item title="标题2" name="two">内容文字2</g-collapse-item>
-    <g-collapse-item title="标题3" name="three">内容文字3</g-collapse-item>
+<g-collapse :selected.sync="selectedTab">
+    <g-collapse-item title="标题1" name="1">内容1</g-collapse-item>
+    <g-collapse-item title="标题2" name="2">内容2</g-collapse-item>
+    <g-collapse-item title="标题3" name="3">内容3</g-collapse-item>
 </g-collapse>
 ```
 
@@ -27,10 +27,10 @@ Collapse 组件的默认效果即可同时展开多个面板，且面板之间�
 </ClientOnly>
 
 ```html
- <g-collapse :selected="['two']" single>
-    <g-collapse-item title="标题1" name="one">内容文字1</g-collapse-item>
-    <g-collapse-item title="标题2" name="two">内容文字2</g-collapse-item>
-    <g-collapse-item title="标题3" name="three">内容文字3</g-collapse-item>
+<g-collapse :selected.sync="selectedTab" single>
+    <g-collapse-item title="标题1" name="1">内容1</g-collapse-item>
+    <g-collapse-item title="标题2" name="2">内容2</g-collapse-item>
+    <g-collapse-item title="标题3" name="3">内容3</g-collapse-item>
 </g-collapse>
 ```
 ##  Attributes `g-collapse`

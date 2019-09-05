@@ -1,28 +1,20 @@
 <template>
   <div class="box">
-    <g-popover position="left">
-      <template slot="content">
-        <div>popover内容</div>
-      </template>
-      <g-button>左边</g-button>
-    </g-popover>
     <g-popover>
-      <template slot="content">
-        <div>popover内容</div>
-      </template>
-      <g-button>上面</g-button>
+        <g-button>上方弹出</g-button>
+        <template slot="content"> 弹出内容</template>
     </g-popover>
     <g-popover position="bottom">
-      <template slot="content">
-        <div>popover内容</div>
-      </template>
-      <g-button>下面</g-button>
+        <g-button>下方弹出</g-button>
+        <template slot="content"> 弹出内容</template>
+    </g-popover>
+    <g-popover position="left">
+        <g-button>左边弹出</g-button>
+        <template slot="content"> 弹出内容</template>
     </g-popover>
     <g-popover position="right">
-      <template slot="content">
-        <div>popover内容</div>
-      </template>
-      <g-button>右边</g-button>
+        <g-button>右边弹出</g-button>
+        <template slot="content"> 弹出内容</template>
     </g-popover>
   </div>
 </template>

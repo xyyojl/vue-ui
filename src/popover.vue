@@ -142,7 +142,7 @@ export default {
 };
 </script>
 <style lang="scss" scoped>
-$border-color: #333;
+$border-color: #ddd;
 $border-radius: 4px;
 .popover {
   display: inline-block;
@@ -151,11 +151,10 @@ $border-radius: 4px;
 }
 .content-wrapper {
   position: absolute;
-  border: 1px solid red;
   border: 1px solid $border-color;
   border-radius: $border-radius;
   filter: drop-shadow(0 1px 1px rgba(0, 0, 0, 0.5));
-  background: #fff;
+  background: #fff; 
   padding: 0.5em 1em;
   max-width: 20em;
   word-break: break-all;
@@ -176,7 +175,7 @@ $border-radius: 4px;
       left: 10px;
     }
     &::before {
-      border-top-color: #000;
+      border-top-color: $border-color;
       border-bottom: 0;
       top: 100%;
     }
@@ -193,7 +192,7 @@ $border-radius: 4px;
       left: 10px;
     }
     &::before {
-      border-bottom-color: #000;
+      border-bottom-color: $border-color;
       border-top: 0;
       bottom: 100%;
     }
@@ -212,7 +211,7 @@ $border-radius: 4px;
       transform: translateY(-50%);
     }
     &::before {
-      border-left-color: #000;
+      border-left-color: $border-color;
       border-right: none;
       left: 100%;
     }
@@ -230,7 +229,7 @@ $border-radius: 4px;
       transform: translateY(-50%);
     }
     &::before {
-      border-right-color: #000;
+      border-right-color: $border-color;
       border-left: none;
       right: 100%;
     }
