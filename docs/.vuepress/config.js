@@ -22,7 +22,7 @@ module.exports = {
                     '/components/toast',
                     '/components/tabs',
                     '/components/popover',
-                    '/components/collpase',
+                    '/components/collapse',
                 ]
             },
         ],
